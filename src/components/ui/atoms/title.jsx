@@ -1,4 +1,8 @@
 import React from 'react';
 
-const Tit = ({children}) => <h1>{children}</h1>
+const Tit = ({ children, size }) => <h1 className={`${size} font-bold`}>{children}</h1>
+
+Tit.defaultProps = {
+    size: 'text-3xl'
+}
 export default Tit;
