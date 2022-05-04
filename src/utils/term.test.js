@@ -1,6 +1,6 @@
-import {stringReturn} from './term'
+import { stringReturn } from './term'
 
-it('test',()=>{
+it('test', () => {
     const value = 'test'
     expect(stringReturn(value)).toBe(value)
 })

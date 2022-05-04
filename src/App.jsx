@@ -1,25 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Routes, Route, NavLink } from "react-router-dom";
 import './App.css';
+import AtomsPage from './pages/atoms';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>테스트</h1>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ul className='flex justify-center gap-3'>
+        <li className='text-red-500 font-bold text-2xl'>
+          <NavLink to='/'>home</NavLink>
+        </li>
+        <li className='text-red-500 font-bold text-2xl'>
+          <NavLink to='/atoms'>atoms</NavLink>
+        </li>
+        <li className='text-red-500 font-bold text-2xl'>
+          <NavLink to='/molecules'>molecules</NavLink>
+        </li>
+        <li className='text-red-500 font-bold text-2xl'>
+          <NavLink to='/organisms'>organisms</NavLink>
+        </li>
+      </ul>
+      <Routes>
+        <Route path="/" element={<div>home</div>} />
+        <Route path="atoms" element={<AtomsPage/>} />
+        <Route path="molecules" element={<div>molecules</div>} />
+        <Route path="organisms" element={<div>organisms</div>} />
+      </Routes>
     </div>
   );
 }
