@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes, Route, NavLink } from "react-router-dom";
-import './App.css';
+import './App.scss';
 import AtomsPage from './pages/atoms';
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
           <NavLink to='/'>home</NavLink>
         </li>
         <li className='text-red-500 font-bold text-2xl'>
-          <NavLink to='/atoms'>atoms</NavLink>
+          <NavLink to='/sendbox'>sendbox</NavLink>
         </li>
         <li className='text-red-500 font-bold text-2xl'>
           <NavLink to='/molecules'>molecules</NavLink>
@@ -22,7 +22,7 @@ function App() {
       </ul>
       <Routes>
         <Route path="/" element={<div>home</div>} />
-        <Route path="atoms" element={<AtomsPage/>} />
+        <Route path="sendbox" element={<AtomsPage/>} />
         <Route path="molecules" element={<div>molecules</div>} />
         <Route path="organisms" element={<div>organisms</div>} />
       </Routes>

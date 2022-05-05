@@ -1,0 +1,11 @@
+.btn {
+  @apply cursor-pointer active:bg-slate-100;
+}
+
+.flex_row {
+  @apply flex;
+}
+
+.flex_col {
+  @apply flex-col;
+}
